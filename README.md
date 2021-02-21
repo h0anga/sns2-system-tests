@@ -19,7 +19,7 @@ https://kafka.apache.org/quickstart
 
 # Instructions
 The first thing you need is an installation of Apache Kafka. We're not using the Confluent platform here.
-You can install Kafka natively onto your OS, or you an run it within Docker. The latter is preferred as its
+You can install Kafka natively onto your OS, or you can run it within Docker. The latter is preferred as it is
 much quicker to get up and running!
 
 We need the following Kafka components:
@@ -40,7 +40,6 @@ And also:
 ```
 git clone https://github.com/confluentinc/ksql.git
 cd ksql
-git checkout tags/v5.1.2
 mvn clean compile install -DskipTests
 ```
 
@@ -76,9 +75,9 @@ Once the brokers have calmed down after starting (ie logs are a bit stable!), ru
 
 ## Run the microservices
 Follow the instructions on these projects:
-[Generic XML->JSON Converter](https://github.com/muirandy/sns-incoming-operator-messages-converter)
-[Enrich with ServiceId](https://github.com/muirandy/sns-modify-enricher)
-[Convert to Knitware XML](https://github.com/muirandy/sns-knitware-converter)
+- [Generic XML->JSON Converter](https://github.com/muirandy/sns-incoming-operator-messages-converter)
+- [Enrich with ServiceId](https://github.com/muirandy/sns-modify-enricher)
+- [Convert to Knitware XML](https://github.com/muirandy/sns-knitware-converter)
 
 ## Run the System test
 In this project, run ModifyFeatureSpec. It should go green!
@@ -103,7 +102,7 @@ Replace the config directory of Kafka with https://github.com/muirandy/sns2-kafk
 
 ## How to start Kafka by hand:
 ```
-cd kafka_2.12-2.1.0
+cd kafka_2.13-2.7.0
 bin/zookeeper-server-start.sh config/zookeeper.properties
 bin/kafka-server-start.sh config/server.properties
 bin/kafka-server-start.sh config/server-1.properties
